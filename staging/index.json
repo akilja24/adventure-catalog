@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": 1,
-  "updatedAt": "2026-09-30T18:19:31+00:00",
+  "catalogVersion": 2,
+  "updatedAt": "2026-09-30T18:19:39+00:00",
   "globalAchievements": [
     {
       "id": "first_adventure",
@@ -27,6 +27,14 @@
     }
   ],
   "stories": [
+    {
+      "id": "mafia",
+      "version": 1,
+      "path": "stories/mafia.json",
+      "title": "Can You Survive The Mafia?",
+      "audience": "adult",
+      "publishedAt": "2026-09-30T18:18:25+00:00"
+    },
     {
       "id": "mountain_survival",
       "version": 1,
