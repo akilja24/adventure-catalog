@@ -1,0 +1,28 @@
+{
+  "globalAchievements": [
+    {
+      "id": "first_lesson",
+      "title": "First Adventure!",
+      "description": "Finish your very first adventure.",
+      "icon": "star",
+      "tier": "bronze",
+      "condition": { "type": "storiesCompleted", "count": 1 }
+    },
+    {
+      "id": "road_safety_graduate",
+      "title": "Road Safety Graduate",
+      "description": "Finish a road safety adventure.",
+      "icon": "traffic",
+      "tier": "silver",
+      "condition": { "type": "categoryCompleted", "category": "Road Safety", "count": 1 }
+    },
+    {
+      "id": "online_safety_graduate",
+      "title": "Online Safety Graduate",
+      "description": "Finish an online safety adventure.",
+      "icon": "shield",
+      "tier": "silver",
+      "condition": { "type": "categoryCompleted", "category": "Online Safety", "count": 1 }
+    }
+  ]
+}

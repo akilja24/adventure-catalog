@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": 1,
+  "updatedAt": "2026-09-30T18:16:55+00:00",
+  "globalAchievements": [
+    {
+      "id": "first_adventure",
+      "title": "First Adventure Completed",
+      "description": "Reach any ending in any adventure.",
+      "icon": "flag",
+      "tier": "bronze",
+      "condition": {
+        "type": "storiesCompleted",
+        "count": 1
+      }
+    },
+    {
+      "id": "seasoned_survivor",
+      "title": "Seasoned Survivor",
+      "description": "Complete three different adventures.",
+      "icon": "hiking",
+      "tier": "silver",
+      "condition": {
+        "type": "storiesCompleted",
+        "count": 3
+      }
+    }
+  ],
+  "stories": [
+    {
+      "id": "mountain_survival",
+      "version": 1,
+      "path": "stories/mountain_survival.json",
+      "title": "The Mountain Survival Challenge",
+      "audience": "general",
+      "publishedAt": "2026-09-30T00:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "id": "crossing_the_road",
+  "title": "Sam Crosses the Road",
+  "shortDescription": "Help Sam get to the park safely!",
+  "description": "Sam wants to get to the park on the other side of a busy road. Can you help Sam make safe choices on the way? There's no wrong way to learn: if a choice doesn't work out, you can always try again.",
+  "thumbnail": null,
+  "category": "Road Safety",
+  "audience": "child",
+  "ageRange": "4-8",
+  "estimatedMinutes": 4,
+  "difficulty": "Easy",
+  "version": 1,
+  "status": "published",
+  "featured": true,
+  "startSceneId": "start",
+  "scoring": { "maxStars": 3, "starThresholds": [0.34, 0.67, 0.95] },
+  "scenes": [
+    {
+      "id": "start",
+      "title": "At the Curb",
+      "videoId": null,
+      "introText": "Sam and Grandma walk to the edge of the road. The park is right across the street! Cars are driving past.",
+      "outroText": "Sam really wants to go and play. What should Sam do first?",
+      "decisions": [
+        {
+          "id": "start_stop_look",
+          "text": "Stop at the curb and hold Grandma's hand",
+          "targetSceneId": "look",
+          "quality": "best",
+          "points": 10,
+          "skill": "Road safety",
+          "feedback": "Yes! Stopping at the curb and holding a grown-up's hand is the safest way to start."
+        },
+        {
+          "id": "start_run",
+          "text": "Run across as fast as possible",
+          "targetSceneId": "honk",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Road safety",
+          "feedback": "Running into the road is really risky, because drivers might not see you in time."
+        }
+      ]
+    },
+    {
+      "id": "honk",
+      "title": "Beep Beep!",
+      "videoId": null,
+      "introText": "Grandma gently pulls Sam back as a car beeps its horn. Phew! Everyone is okay. Grandma smiles and says, \"Let's try that again, the safe way.\"",
+      "educationalNote": "Always stop at the curb. Roads are for cars, and it can be hard for drivers to see small people.",
+      "decisions": [
+        {
+          "id": "honk_try_again",
+          "text": "Stop, hold Grandma's hand and try again",
+          "targetSceneId": "look",
+          "quality": "good",
+          "points": 6,
+          "skill": "Road safety",
+          "feedback": "Great recovery! Trying again the safe way is exactly right."
+        }
+      ]
+    },
+    {
+      "id": "look",
+      "title": "Look and Listen",
+      "videoId": null,
+      "introText": "Sam holds Grandma's hand at the curb. There's a crosswalk with a traffic light a little way along the street.",
+      "outroText": "How should Sam and Grandma cross?",
+      "decisions": [
+        {
+          "id": "look_crosswalk",
+          "text": "Walk to the crosswalk and wait for the green walking person",
+          "targetSceneId": "end_park",
+          "quality": "best",
+          "points": 10,
+          "skill": "Road safety",
+          "feedback": "Perfect! Crosswalks and walk signals help everyone cross safely."
+        },
+        {
+          "id": "look_between_cars",
+          "text": "Cross between the parked cars. It's closer!",
+          "targetSceneId": "end_try_again",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Road safety",
+          "feedback": "Parked cars can hide you from drivers. It's safer to use the crosswalk."
+        }
+      ]
+    },
+    {
+      "id": "end_park",
+      "title": "Hooray, the Park!",
+      "videoId": null,
+      "introText": "The walking person turns green. Sam and Grandma look left, right and left again, then cross together. Sam runs to the swings. What a great day!",
+      "isEnding": true,
+      "ending": { "type": "success", "title": "Safe at the Park", "summary": "You stopped, held hands and used the crosswalk. Road safety superstar!" },
+      "decisions": []
+    },
+    {
+      "id": "end_try_again",
+      "title": "Hmm, Not Quite",
+      "videoId": null,
+      "introText": "Grandma stops Sam. \"The drivers can't see us behind these parked cars,\" she says. \"Let's walk to the crosswalk.\" Sam nods. Next time, Sam will remember!",
+      "isEnding": true,
+      "ending": { "type": "neutral", "title": "Almost There", "summary": "Parked cars can hide you. Crosswalks are the safest place to cross." },
+      "decisions": []
+    }
+  ],
+  "achievements": [
+    {
+      "id": "road_safety_star",
+      "title": "Road Safety Star",
+      "description": "Help Sam get to the park safely using the crosswalk.",
+      "icon": "traffic",
+      "tier": "gold",
+      "condition": { "type": "reachEnding", "sceneIds": ["end_park"] }
+    }
+  ]
+}
