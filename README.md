@@ -16,3 +16,10 @@ validate, then run `python3 tools/build_index.py`, then commit and push. Pages u
 
 Only story JSON and thumbnails live here. Videos stay on YouTube and are never copied.
 `lessons/` is for the children's product, which stays disabled in public builds until compliance review.
+
+## Staging
+
+`staging/` holds stories under review. Only debug builds made with
+`--dart-define=CATALOG_URL=https://akilja24.github.io/adventure-catalog/staging/` read it, so
+production apps never show it. Promote a story by moving it and its thumbnail into `survival/`
+(or `lessons/`) and rebuilding both indexes.

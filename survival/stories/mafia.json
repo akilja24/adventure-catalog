@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "id": "mafia",
+  "title": "Can You Survive The Mafia?",
+  "shortDescription": "One robbery puts Tommy in front of a mob captain. Every choice from here is life or death.",
+  "description": "Tommy Bruno grew up in a New York tenement with a sick mother, two loyal friends and no way out. One robbery puts him in front of a mob captain called Benny \"The Shark\", and from there every choice is yours.\n\nNine parts. Five endings. Only one of them gets you out alive, and it may cost you more than you expect.\n\nContains violence, including gun violence. Fiction; visuals and voices were made with AI tools.",
+  "thumbnail": "thumbs/mafia.jpg",
+  "category": "Crime",
+  "audience": "adult",
+  "ageRange": "17+",
+  "estimatedMinutes": 18,
+  "difficulty": "Hard",
+  "version": 1,
+  "status": "draft",
+  "featured": false,
+  "publishedAt": "2026-09-30T18:18:25+00:00",
+  "startSceneId": "intro",
+  "scoring": {
+    "maxStars": 3,
+    "starThresholds": [
+      0.34,
+      0.67,
+      0.95
+    ]
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "title": "Mean Streets",
+      "videoId": "N_5OiJi45kU",
+      "introText": "A New York tenement, a sick mother and a father long gone. Tommy and his friends Chris and Frankie rob a bar to make rent, and it turns out the bar belongs to Benny \"The Shark\", a captain in the mob. Now The Shark wants a meeting.",
+      "decisions": [
+        {
+          "id": "intro__meeting",
+          "text": "Go to the meeting and face The Shark",
+          "targetSceneId": "meeting",
+          "quality": "best",
+          "points": 10,
+          "skill": "Street smarts",
+          "feedback": "Facing The Shark was dangerous, but in this world running looks like guilt."
+        },
+        {
+          "id": "intro__runaway",
+          "text": "Skip town and lay low",
+          "targetSceneId": "runaway",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Street smarts",
+          "feedback": "Running tells the mob you're a problem. They don't let problems stay lost."
+        }
+      ],
+      "isEnding": false,
+      "outroText": "Chris is convinced The Shark will kill all three of you if you show up. He wants to skip town and lay low. Frankie says running only makes it worse."
+    },
+    {
+      "id": "meeting",
+      "title": "Face The Shark",
+      "videoId": "-9VWNiPtwu4",
+      "introText": "The restaurant is dim, the bouncers are rough, and Benny \"The Shark\" is waiting at the back table. You came to face the music. The question is what he'll ask in return.",
+      "decisions": [
+        {
+          "id": "meeting__hit",
+          "text": "Carry out the hit on Chris",
+          "targetSceneId": "hit",
+          "quality": "best",
+          "points": 10,
+          "skill": "Loyalty to the family",
+          "feedback": "In The Shark's world, refusing an order is a death sentence. You survived, at a terrible price."
+        },
+        {
+          "id": "meeting__warn",
+          "text": "Warn Chris and tell him to run",
+          "targetSceneId": "warn",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Loyalty to the family",
+          "feedback": "A decent choice, but Frankie had already picked his side."
+        }
+      ],
+      "isEnding": false,
+      "outroText": "The Shark's price for your life: someone has to pay for the robbery, and he's decided it's Chris. That night you and Frankie knock on Chris's door. \"What's going on?\" he asks."
+    },
+    {
+      "id": "runaway",
+      "title": "Skip Town",
+      "videoId": "WQAV6Qs3fNg",
+      "introText": "You chose to run. A cab, a bus, a cheap room in another city, and the constant feeling of being watched.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "failure",
+        "title": "Nowhere to Run",
+        "summary": "Running told The Shark everything he needed to know. The family always finds the ones who flee."
+      }
+    },
+    {
+      "id": "hit",
+      "title": "The Hit",
+      "videoId": "AjGxJ0Q0KeU",
+      "introText": "You can't look Chris in the eye. Frankie pulls out his gun. Years later you're a made man with money and a reputation, and Benny is still needling you, now at a sit-down in front of the boss.",
+      "decisions": [
+        {
+          "id": "hit__punch",
+          "text": "Attack Benny and defend your honour",
+          "targetSceneId": "punch",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Self-control",
+          "feedback": "Benny was baiting you. Hitting a made man without permission breaks the most serious rule in the family."
+        },
+        {
+          "id": "hit__calm",
+          "text": "Stay calm and let your words do the fighting",
+          "targetSceneId": "calm",
+          "quality": "best",
+          "points": 10,
+          "skill": "Self-control",
+          "feedback": "Keeping your temper denied Benny exactly what he wanted."
+        }
+      ],
+      "isEnding": false,
+      "outroText": "Benny's insults land one after another, right in front of the boss. Every instinct says to make him pay for it. But this is a sit-down, and the boss is watching."
+    },
+    {
+      "id": "warn",
+      "title": "The Warning",
+      "videoId": "dvFr-3TJpJY",
+      "introText": "You can't do it. At Chris's door you try to warn him to run, but Frankie is right behind you.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "failure",
+        "title": "The Warning",
+        "summary": "Frankie chose the family over friendship. Warning Chris cost you your life."
+      }
+    },
+    {
+      "id": "punch",
+      "title": "Hands On A Made Man",
+      "videoId": "wtpdaQr-DTg",
+      "introText": "Your fists are clenched. You've had enough of Benny's insults, and you stand up.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "failure",
+        "title": "Hands On A Made Man",
+        "summary": "Benny baited you, and you broke the rule that nobody lays hands on a made man without the boss's permission."
+      }
+    },
+    {
+      "id": "calm",
+      "title": "The Sit-Down",
+      "videoId": "25WA4V6L1ro",
+      "introText": "You keep your cool. Benny wants you to swing at him, and you won't give him that. After the sit-down, the boss calls you in alone.",
+      "decisions": [
+        {
+          "id": "calm__kill_benny",
+          "text": "Kill Benny and follow the boss's order",
+          "targetSceneId": "kill_benny",
+          "quality": "best",
+          "points": 10,
+          "skill": "Loyalty to the family",
+          "feedback": "You followed the boss's order, the only way to stay alive in the life you chose."
+        },
+        {
+          "id": "calm__walkaway",
+          "text": "Refuse and walk away",
+          "targetSceneId": "walkaway",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Loyalty to the family",
+          "feedback": "Refusing the boss made you a liability who knows too much."
+        }
+      ],
+      "isEnding": false,
+      "outroText": "\"You take care of Benny,\" the boss says, \"and his territory becomes yours.\" Refusing a direct order has consequences. So does pulling that trigger. \"So what's it gonna be, Tommy?\""
+    },
+    {
+      "id": "kill_benny",
+      "title": "The New Boss",
+      "videoId": "Aq_NlFEVE08",
+      "introText": "You accept the order. Loyalty with limits is no loyalty at all, and Benny arrives expecting just another sit-down.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "success",
+        "title": "The New Boss",
+        "summary": "You survived and rose to the top. But you didn't beat Benny The Shark. You became him."
+      }
+    },
+    {
+      "id": "walkaway",
+      "title": "Walk Away",
+      "videoId": "W8WEGbnztW4",
+      "introText": "You've had enough. After everything you've done, you think you've earned the right to walk away. But men who know that many secrets don't get to retire.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "failure",
+        "title": "Walk Away",
+        "summary": "The boss didn't let you leave. He let you lead his men somewhere quiet."
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "mafia_made_it_out",
+      "title": "Made Man",
+      "description": "Survive the Mafia story all the way to the top.",
+      "icon": "workspace_premium",
+      "tier": "gold",
+      "condition": {
+        "type": "reachEnding",
+        "sceneIds": [
+          "kill_benny"
+        ]
+      }
+    },
+    {
+      "id": "mafia_cool_head",
+      "title": "Cool Head",
+      "description": "Make the best call three times in a single run.",
+      "icon": "psychology",
+      "tier": "silver",
+      "condition": {
+        "type": "decisionQualityCount",
+        "quality": "best",
+        "count": 3
+      }
+    },
+    {
+      "id": "mafia_all_endings",
+      "title": "Every Fate",
+      "description": "Discover all five endings of the Mafia story.",
+      "icon": "explore",
+      "tier": "gold",
+      "condition": {
+        "type": "allEndings"
+      }
+    }
+  ],
+  "source": {
+    "studio": "mafia_real",
+    "parts": 9
+  }
+}
