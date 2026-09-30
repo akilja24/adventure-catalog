@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": 1,
-  "updatedAt": "2026-09-30T18:16:55+00:00",
+  "catalogVersion": 2,
+  "updatedAt": "2026-09-30T21:06:10+00:00",
   "globalAchievements": [
     {
       "id": "first_lesson",
@@ -37,8 +37,21 @@
         "category": "Online Safety",
         "count": 1
       }
+    },
+    {
+      "id": "staying_safe_graduate",
+      "title": "Safety Superstar",
+      "description": "Finish a staying-safe adventure.",
+      "icon": "shield",
+      "tier": "silver",
+      "condition": {
+        "type": "categoryCompleted",
+        "category": "Staying Safe",
+        "count": 1
+      }
     }
   ],
+  "comingSoon": [],
   "stories": [
     {
       "id": "crossing_the_road",
@@ -46,6 +59,14 @@
       "path": "stories/crossing_the_road.json",
       "title": "Sam Crosses the Road",
       "audience": "child"
+    },
+    {
+      "id": "lost_at_the_fair",
+      "version": 1,
+      "path": "stories/lost_at_the_fair.json",
+      "title": "Lost at the Fair",
+      "audience": "child",
+      "publishedAt": "2026-09-30T21:04:49+00:00"
     }
   ]
 }

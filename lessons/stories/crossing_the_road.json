@@ -12,9 +12,16 @@
   "difficulty": "Easy",
   "version": 1,
   "status": "published",
-  "featured": true,
+  "featured": false,
   "startSceneId": "start",
-  "scoring": { "maxStars": 3, "starThresholds": [0.34, 0.67, 0.95] },
+  "scoring": {
+    "maxStars": 3,
+    "starThresholds": [
+      0.34,
+      0.67,
+      0.95
+    ]
+  },
   "scenes": [
     {
       "id": "start",
@@ -94,7 +101,11 @@
       "videoId": null,
       "introText": "The walking person turns green. Sam and Grandma look left, right and left again, then cross together. Sam runs to the swings. What a great day!",
       "isEnding": true,
-      "ending": { "type": "success", "title": "Safe at the Park", "summary": "You stopped, held hands and used the crosswalk. Road safety superstar!" },
+      "ending": {
+        "type": "success",
+        "title": "Safe at the Park",
+        "summary": "You stopped, held hands and used the crosswalk. Road safety superstar!"
+      },
       "decisions": []
     },
     {
@@ -103,7 +114,11 @@
       "videoId": null,
       "introText": "Grandma stops Sam. \"The drivers can't see us behind these parked cars,\" she says. \"Let's walk to the crosswalk.\" Sam nods. Next time, Sam will remember!",
       "isEnding": true,
-      "ending": { "type": "neutral", "title": "Almost There", "summary": "Parked cars can hide you. Crosswalks are the safest place to cross." },
+      "ending": {
+        "type": "neutral",
+        "title": "Almost There",
+        "summary": "Parked cars can hide you. Crosswalks are the safest place to cross."
+      },
       "decisions": []
     }
   ],
@@ -114,7 +129,12 @@
       "description": "Help Sam get to the park safely using the crosswalk.",
       "icon": "traffic",
       "tier": "gold",
-      "condition": { "type": "reachEnding", "sceneIds": ["end_park"] }
+      "condition": {
+        "type": "reachEnding",
+        "sceneIds": [
+          "end_park"
+        ]
+      }
     }
   ]
 }
