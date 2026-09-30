@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "id": "vietnam_1968",
+  "title": "Would You Survive: Vietnam, 1968",
+  "shortDescription": "A nineteen-year-old replacement, five rules from a hard sergeant, and three days in the Central Highlands.",
+  "description": "You are Private Daniel Kowalski, nineteen, a replacement arriving at a Central Highlands firebase in 1968. Staff Sergeant Cole gives you five rules. Over three days the jungle tests four of them, and every choice is yours.\n\nNine parts. Five endings. Only one of them sends you home.\n\nContains war violence, including explosions, gunfire and the deaths of soldiers. Fiction; visuals and voices were made with AI tools.",
+  "thumbnail": "thumbs/vietnam_1968.jpg",
+  "category": "War",
+  "audience": "adult",
+  "ageRange": "17+",
+  "estimatedMinutes": 9,
+  "difficulty": "Medium",
+  "version": 1,
+  "status": "published",
+  "featured": false,
+  "publishedAt": "2026-09-30T20:35:13+00:00",
+  "startSceneId": "arrival",
+  "scoring": {
+    "maxStars": 3,
+    "starThresholds": [
+      0.34,
+      0.67,
+      0.95
+    ]
+  },
+  "scenes": [
+    {
+      "id": "arrival",
+      "title": "Arrival",
+      "videoId": "XrvF3gdb264",
+      "introText": "1968. A Huey drops you onto the red dust of a Central Highlands firebase, eleven days out of Pittsburgh. Staff Sergeant Cole gives you five rules and warns that you will forget one.",
+      "decisions": [
+        {
+          "id": "arrival__souvenir",
+          "text": "Take the flag",
+          "targetSceneId": "souvenir",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Trap awareness",
+          "feedback": "Anything left lying clean on a battlefield was left there for someone to pick up."
+        },
+        {
+          "id": "arrival__halt",
+          "text": "Leave it and keep walking",
+          "targetSceneId": "halt",
+          "quality": "best",
+          "points": 10,
+          "skill": "Trap awareness",
+          "feedback": "Touch nothing you did not bring: a tempting object on the trail is usually a trigger."
+        }
+      ],
+      "isEnding": false,
+      "outroText": "A dead Viet Cong soldier lies beside the trail, a clean red-and-blue flag folded on his pack. Reed nudges you: a souvenir. Cole is forty meters ahead with his back turned, and you have about four seconds."
+    },
+    {
+      "id": "souvenir",
+      "title": "Souvenir",
+      "videoId": "ejud4UPvTE8",
+      "introText": "You reach for the flag. Touch nothing you did not bring, Cole had said.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "failure",
+        "title": "Booby Trap",
+        "summary": "The flag was bait wired to a grenade, and the pack kept its account."
+      }
+    },
+    {
+      "id": "halt",
+      "title": "Halt",
+      "videoId": "3APYSkeetkI",
+      "introText": "You leave the flag where it lies. That afternoon the monsoon hits and the column halts on the slope, every man at his interval.",
+      "decisions": [
+        {
+          "id": "halt__mortar",
+          "text": "Get under the trunk with Reed",
+          "targetSceneId": "mortar",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Keeping your interval",
+          "feedback": "A dry spot for two is a target for one round. Spacing is what keeps a mortar from taking two men at once."
+        },
+        {
+          "id": "halt__night",
+          "text": "Stay where you are, five meters out",
+          "targetSceneId": "night",
+          "quality": "best",
+          "points": 10,
+          "skill": "Keeping your interval",
+          "feedback": "Five meters of wet misery kept you outside the killing radius of the round that came."
+        }
+      ],
+      "isEnding": false,
+      "outroText": "Reed has found a dry spot under a fallen trunk and has real coffee brewing. He waves you over. There is room for one more body, but Cole keeps repeating: spread out, gentlemen."
+    },
+    {
+      "id": "mortar",
+      "title": "Mortar",
+      "videoId": "Ud_Sd3hlvYc",
+      "introText": "You crawl under the trunk with Reed. It is dry, and the coffee is hot.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "failure",
+        "title": "Bunched Up",
+        "summary": "Two men under one trunk made a single target for the mortars that had been measuring the slope."
+      }
+    },
+    {
+      "id": "night",
+      "title": "Night",
+      "videoId": "WwTqLK1AV9A",
+      "introText": "You keep your interval in the rain. By dusk the platoon digs in on the crest, and Cole gives one order: nobody fires.",
+      "decisions": [
+        {
+          "id": "night__flash",
+          "text": "Fire at the sound",
+          "targetSceneId": "flash",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Fire discipline",
+          "feedback": "A muzzle flash at night is a beacon; the movement below was fishing for exactly that."
+        },
+        {
+          "id": "night__morning",
+          "text": "Hold fire. Let Reed throw the grenade",
+          "targetSceneId": "morning",
+          "quality": "best",
+          "points": 10,
+          "skill": "Fire discipline",
+          "feedback": "A grenade has no flash to trace back to you. Staying dark kept the perimeter invisible."
+        }
+      ],
+      "isEnding": false,
+      "outroText": "After midnight something moves in the brush below, twelve meters out and getting closer. Your thumb is on the selector. Reed has a grenade in his hand, but your rifle can answer first."
+    },
+    {
+      "id": "flash",
+      "title": "Flash",
+      "videoId": "oILlv44R8LY",
+      "introText": "You squeeze the trigger at the sound in the dark.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "failure",
+        "title": "Muzzle Flash",
+        "summary": "Firing at a sound gave the enemy the coordinates they were waiting for, and you were the first to fall."
+      }
+    },
+    {
+      "id": "morning",
+      "title": "Morning",
+      "videoId": "BykBaj2mxuo",
+      "introText": "You hold fire. Reed's grenade bursts below the crest, and by daylight there is only blood on the leaves. At the landing zone, a new lieutenant is asking for the replacements.",
+      "decisions": [
+        {
+          "id": "morning__sniper",
+          "text": "Walk up, salute, and report",
+          "targetSceneId": "sniper",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Field awareness",
+          "feedback": "In the field a salute points out the officer to anyone watching, and marks you as standing next to him."
+        },
+        {
+          "id": "morning__survive",
+          "text": "Stay back and keep your distance",
+          "targetSceneId": "survive",
+          "quality": "best",
+          "points": 10,
+          "skill": "Field awareness",
+          "feedback": "Keeping your distance and your hands on your rifle gave the tree line nothing worth shooting."
+        }
+      ],
+      "isEnding": false,
+      "outroText": "The lieutenant stands in open grass with his radio operator's antenna waving above them. Eight weeks of training want you to walk over and salute. Beyond the grass, four hundred meters of tree line watches."
+    },
+    {
+      "id": "sniper",
+      "title": "Sniper",
+      "videoId": "6Q6WH3eBhRc",
+      "introText": "You cross the grass, come to attention and raise your hand to your helmet.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "failure",
+        "title": "The Salute",
+        "summary": "One salute told the sniper in the tree line exactly who to shoot first."
+      }
+    },
+    {
+      "id": "survive",
+      "title": "Survive",
+      "videoId": "rT3mH6XRubU",
+      "introText": "You stay in the grass, rifle in hand, and call out your name from thirty meters away.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "success",
+        "title": "Short-Timer",
+        "summary": "You remembered every rule that mattered, and thirty days later you are the one reading the new men's names."
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "id": "vietnam_1968_short_timer",
+      "title": "Short-Timer",
+      "description": "Survive three days in the Central Highlands.",
+      "icon": "military_tech",
+      "tier": "gold",
+      "condition": {
+        "type": "reachEnding",
+        "sceneIds": [
+          "survive"
+        ]
+      }
+    },
+    {
+      "id": "vietnam_1968_cole_rules",
+      "title": "Cole's Rules",
+      "description": "Survive without breaking a single rule.",
+      "icon": "shield",
+      "tier": "gold",
+      "condition": {
+        "type": "perfectRun"
+      }
+    },
+    {
+      "id": "vietnam_1968_booby_trap",
+      "title": "Souvenir Hunter",
+      "description": "Find out what was under the flag.",
+      "icon": "flag",
+      "tier": "bronze",
+      "condition": {
+        "type": "reachEnding",
+        "sceneIds": [
+          "souvenir"
+        ]
+      }
+    },
+    {
+      "id": "vietnam_1968_all_endings",
+      "title": "Every Fate",
+      "description": "Discover all 5 endings.",
+      "icon": "explore",
+      "tier": "silver",
+      "condition": {
+        "type": "allEndings"
+      }
+    }
+  ],
+  "source": {
+    "studio": "vietnam_recruit",
+    "parts": 9
+  }
+}

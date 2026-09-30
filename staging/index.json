@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": 4,
-  "updatedAt": "2026-09-30T18:45:32+00:00",
+  "catalogVersion": 5,
+  "updatedAt": "2026-09-30T20:36:32+00:00",
   "globalAchievements": [
     {
       "id": "first_adventure",
@@ -42,6 +42,14 @@
       "title": "The Mountain Survival Challenge",
       "audience": "general",
       "publishedAt": "2026-09-30T00:00:00Z"
+    },
+    {
+      "id": "vietnam_1968",
+      "version": 1,
+      "path": "stories/vietnam_1968.json",
+      "title": "Would You Survive: Vietnam, 1968",
+      "audience": "adult",
+      "publishedAt": "2026-09-30T20:35:13+00:00"
     }
   ]
 }
