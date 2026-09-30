@@ -13,7 +13,7 @@
   "version": 1,
   "status": "published",
   "featured": false,
-  "publishedAt": "2026-09-30T20:35:13+00:00",
+  "publishedAt": "2026-09-30T21:05:07+00:00",
   "startSceneId": "arrival",
   "scoring": {
     "maxStars": 3,
@@ -249,9 +249,5 @@
         "type": "allEndings"
       }
     }
-  ],
-  "source": {
-    "studio": "vietnam_recruit",
-    "parts": 9
-  }
+  ]
 }

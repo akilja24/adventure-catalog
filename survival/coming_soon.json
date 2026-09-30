@@ -1,0 +1,16 @@
+{
+  "comingSoon": [
+    {
+      "id": "pirates",
+      "title": "Can You Survive The Pirates?",
+      "teaser": "Press-ganged onto a pirate ship. Mutiny, storms and treasure. Choose wisely.",
+      "thumbnail": "thumbs/coming_pirates.jpg"
+    },
+    {
+      "id": "zombies",
+      "title": "Can You Survive The Zombie Apocalypse?",
+      "teaser": "The city fell overnight. Find your family and get out alive.",
+      "thumbnail": "thumbs/coming_zombies.jpg"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "id": "lost_at_the_fair",
+  "title": "Lost at the Fair",
+  "shortDescription": "Mia gets lost at the Sunshine Fair. Can you help her stay safe and find Dad?",
+  "description": "Mia is six, and today she's at the Sunshine Fair with her dad. When she stops to watch the puppy show, she turns around... and Dad is gone. What should Mia do? You choose!\n\nAn interactive safety story for kids aged 4-8, made to watch together with a grown-up. It practises what to do when you get lost: Stop. Stay where you are. Ask a safe helper, like a worker with a name badge or a mom with kids. And always check first before going anywhere with anyone.\n\nFour parts. Three choices. One way to stay safe - and if you pick another one, you can always go back and try again.",
+  "thumbnail": "thumbs/lost_at_the_fair.jpg",
+  "category": "Staying Safe",
+  "audience": "child",
+  "ageRange": "4-8",
+  "estimatedMinutes": 2,
+  "difficulty": "Easy",
+  "version": 1,
+  "status": "published",
+  "featured": true,
+  "publishedAt": "2026-09-30T21:04:49+00:00",
+  "startSceneId": "lost",
+  "scoring": {
+    "maxStars": 3,
+    "starThresholds": [
+      0.34,
+      0.67,
+      0.95
+    ]
+  },
+  "scenes": [
+    {
+      "id": "lost",
+      "title": "Lost at the Fair",
+      "videoId": "ho-X4bgr3oI",
+      "introText": "This is Mia! She is at the Sunshine Fair with her dad. There are rides, music and puppies!",
+      "decisions": [
+        {
+          "id": "lost__run",
+          "text": "Run and look for Dad",
+          "targetSceneId": "run",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Staying safe",
+          "feedback": "Good try! Running around makes it harder for Dad to find you. It's safer to stop and stay where you are."
+        },
+        {
+          "id": "lost__man",
+          "text": "Go with the man",
+          "targetSceneId": "man",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Staying safe",
+          "feedback": "Good try! Never go anywhere with someone without checking with your grown-up first. It's safer to stay and ask a safe helper."
+        },
+        {
+          "id": "lost__helper",
+          "text": "Stop, stay and ask for help",
+          "targetSceneId": "helper",
+          "quality": "best",
+          "points": 10,
+          "skill": "Staying safe",
+          "feedback": "Yes! Stop, stay where you are and ask a safe helper. That's exactly right!"
+        }
+      ],
+      "isEnding": false,
+      "outroText": "Oh no! Mia turned around, and Dad isn't there. A man says he saw Dad by the parking lot. What should Mia do?",
+      "educationalNote": "Stop. Stay where you are. Ask a safe helper, like a worker with a name badge or a mom with kids."
+    },
+    {
+      "id": "run",
+      "title": "Run and Look",
+      "videoId": "CQEPzN2srKY",
+      "introText": "Mia runs off to look for Dad all by herself. Past the popcorn. Past the Ferris wheel...",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "neutral",
+        "title": "Too Far Away",
+        "summary": "Mia ran farther away, so it was harder for Dad to find her. Let's go back and try again!"
+      },
+      "educationalNote": "When you're lost, stop and stay where you are. That makes it easier for your grown-up to find you."
+    },
+    {
+      "id": "man",
+      "title": "Go With the Man",
+      "videoId": "gANHBe4jBmc",
+      "introText": "Mia starts to follow the man. He seems nice. But wait! Mia doesn't know him.",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "neutral",
+        "title": "Check First!",
+        "summary": "Always check with your grown-up before you go anywhere with anyone. Let's go back and try again!"
+      },
+      "educationalNote": "Most grown-ups are kind, but safe helpers help you right where you are. Always check first."
+    },
+    {
+      "id": "helper",
+      "title": "Stop, Stay and Ask",
+      "videoId": "2fmZc6pnMqs",
+      "introText": "Mia stops. She stays right where she is. Then she looks for a safe helper, and sees a fair worker in a blue vest!",
+      "decisions": [],
+      "isEnding": true,
+      "ending": {
+        "type": "success",
+        "title": "Safe with Dad!",
+        "summary": "Mia stopped, stayed and asked a safe helper, and Dad came right back for a big hug!"
+      },
+      "educationalNote": "Remember: Stop. Stay. Ask a safe helper."
+    }
+  ],
+  "achievements": [
+    {
+      "id": "lost_at_the_fair_safety_star",
+      "title": "Safety Star",
+      "description": "Help Mia stop, stay and ask a safe helper.",
+      "icon": "star",
+      "tier": "gold",
+      "condition": {
+        "type": "reachEnding",
+        "sceneIds": [
+          "helper"
+        ]
+      }
+    },
+    {
+      "id": "lost_at_the_fair_explorer",
+      "title": "Try Every Path",
+      "description": "See all 3 endings of Lost at the Fair.",
+      "icon": "visibility",
+      "tier": "silver",
+      "condition": {
+        "type": "allEndings"
+      }
+    }
+  ],
+  "source": {
+    "studio": "kids_lost_fair",
+    "parts": 4
+  }
+}

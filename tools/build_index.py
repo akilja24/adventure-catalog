@@ -6,6 +6,7 @@ Usage: python3 tools/build_index.py survival [lessons ...]
 - Only stories with "status": "published" are listed (drafts/archived are not).
 - catalogVersion increases on every change so apps can tell something moved.
 - Global (catalogue-wide) achievements come from <variant>/achievements.json.
+- Upcoming-story teasers come from <variant>/coming_soon.json ({"comingSoon": [...]}).
 Validate stories first:  (cd ~/cyoa && dart run tool/validate_story.dart <dir>)
 """
 import json, sys, datetime, pathlib
@@ -31,8 +32,10 @@ def build(variant: str) -> None:
         })
     ach_path = d / "achievements.json"
     globals_ = json.loads(ach_path.read_text())["globalAchievements"] if ach_path.exists() else []
-    body = {"globalAchievements": globals_, "stories": entries}
-    old_body = {"globalAchievements": old.get("globalAchievements"), "stories": old.get("stories")}
+    cs_path = d / "coming_soon.json"
+    coming = json.loads(cs_path.read_text())["comingSoon"] if cs_path.exists() else []
+    body = {"globalAchievements": globals_, "comingSoon": coming, "stories": entries}
+    old_body = {k: old.get(k) for k in ("globalAchievements", "comingSoon", "stories")}
     version = old.get("catalogVersion", 0) + (0 if body == old_body else 1)
     index = {
         "schemaVersion": 1,

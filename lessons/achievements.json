@@ -23,6 +23,14 @@
       "icon": "shield",
       "tier": "silver",
       "condition": { "type": "categoryCompleted", "category": "Online Safety", "count": 1 }
+    },
+    {
+      "id": "staying_safe_graduate",
+      "title": "Safety Superstar",
+      "description": "Finish a staying-safe adventure.",
+      "icon": "shield",
+      "tier": "silver",
+      "condition": { "type": "categoryCompleted", "category": "Staying Safe", "count": 1 }
     }
   ]
 }

@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Can You Survive?</title><meta name="description" content="Interactive survival stories. You make the choices. You live with them.">
+<link rel="stylesheet" href="../assets.css"></head><body><main>
+<p class="muted">CAN YOU SURVIVE?</p>
+<img class="hero" id="thumb" alt="">
+<h1 id="title">You make the choices. You live with them.</h1>
+<p id="desc" class="muted">Interactive survival stories where every decision decides whether you make it out alive.</p>
+<a class="btn" id="open" href="#">Play in the app</a>
+<a class="btn alt" id="store" href="https://play.google.com/store/apps/details?id=com.canyousurvive.app">Get it on Google Play</a>
+<p class="muted" style="font-size:.85rem">Free to play. <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a></p>
+</main>
+<script>
+const APP_ID = 'com.canyousurvive.app', SCHEME = 'canyousurvive';
+const store = 'https://play.google.com/store/apps/details?id=' + APP_ID;
+const id = (new URLSearchParams(location.search).get('id') || '').replace(/[^a-z0-9_-]/gi, '');
+const open = document.getElementById('open');
+const path = id ? 'story/' + id : '';
+// Android intent URL: opens the app if installed, otherwise the Play Store.
+open.href = 'intent://app/' + path + '#Intent;scheme=' + SCHEME + ';package=' + APP_ID +
+  ';S.browser_fallback_url=' + encodeURIComponent(store) + ';end';
+if (!/android/i.test(navigator.userAgent)) open.style.display = 'none';
+if (id) {
+  fetch('../survival/stories/' + id + '.json').then(r => r.ok ? r.json() : null).then(s => {
+    if (!s) return;
+    document.title = s.title + ' – Can You Survive?';
+    document.getElementById('title').textContent = s.title;
+    document.getElementById('desc').textContent = s.shortDescription || '';
+    if (s.thumbnail) { const t = document.getElementById('thumb'); t.src = '../survival/' + s.thumbnail; t.alt = s.title; }
+  }).catch(() => {});
+}
+</script></body></html>
