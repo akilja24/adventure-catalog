@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": 2,
-  "updatedAt": "2026-09-30T18:19:39+00:00",
+  "catalogVersion": 3,
+  "updatedAt": "2026-09-30T18:41:40+00:00",
   "globalAchievements": [
     {
       "id": "first_adventure",
@@ -42,6 +42,13 @@
       "title": "The Mountain Survival Challenge",
       "audience": "general",
       "publishedAt": "2026-09-30T00:00:00Z"
+    },
+    {
+      "id": "notification_test",
+      "version": 1,
+      "path": "stories/notification_test.json",
+      "title": "Notification Test (staging only)",
+      "audience": "general"
     }
   ]
 }

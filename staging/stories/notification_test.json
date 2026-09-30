@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "notification_test",
+  "title": "Notification Test (staging only)",
+  "shortDescription": "One line that sells the story.",
+  "description": "Full description shown on the details page.",
+  "thumbnail": null,
+  "category": "Wilderness",
+  "audience": "general",
+  "ageRange": "13+",
+  "estimatedMinutes": 10,
+  "difficulty": "Medium",
+  "version": 1,
+  "status": "published",
+  "featured": false,
+  "startSceneId": "start",
+  "scoring": {
+    "maxStars": 3,
+    "starThresholds": [
+      0.34,
+      0.67,
+      0.95
+    ]
+  },
+  "scenes": [
+    {
+      "id": "start",
+      "title": "Part 1",
+      "videoId": null,
+      "introText": "Set the scene in a sentence or two.",
+      "outroText": "The dilemma, shown next to the choices.",
+      "decisions": [
+        {
+          "id": "start_a",
+          "text": "The wise choice",
+          "targetSceneId": "good_end",
+          "quality": "best",
+          "points": 10,
+          "skill": "Judgement",
+          "feedback": "Why this works."
+        },
+        {
+          "id": "start_b",
+          "text": "The risky choice",
+          "targetSceneId": "bad_end",
+          "quality": "poor",
+          "points": 0,
+          "skill": "Judgement",
+          "feedback": "Why this goes wrong."
+        }
+      ]
+    },
+    {
+      "id": "good_end",
+      "title": "Part 2",
+      "videoId": null,
+      "introText": "What happens.",
+      "isEnding": true,
+      "ending": {
+        "type": "success",
+        "title": "You Made It",
+        "summary": "One-line takeaway."
+      },
+      "decisions": []
+    },
+    {
+      "id": "bad_end",
+      "title": "Part 3",
+      "videoId": null,
+      "introText": "What happens.",
+      "isEnding": true,
+      "ending": {
+        "type": "failure",
+        "title": "Not This Time",
+        "summary": "One-line takeaway."
+      },
+      "decisions": []
+    }
+  ],
+  "achievements": [
+    {
+      "id": "notification_test_survivor",
+      "title": "Survivor",
+      "description": "Reach the good ending.",
+      "icon": "workspace_premium",
+      "tier": "gold",
+      "condition": {
+        "type": "reachEnding",
+        "sceneIds": [
+          "good_end"
+        ]
+      }
+    }
+  ]
+}
